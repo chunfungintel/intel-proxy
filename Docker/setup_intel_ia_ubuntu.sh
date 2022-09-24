@@ -51,14 +51,6 @@ EOF
 
 mkdir -p ~/.docker
 echo "{
-        \"auths\": {
-                \"gar-registry.caas.intel.com\": {
-                        \"auth\": \"anN1bjMyOld5bGRzajclRmViMjAyMA==\"
-                }
-        },
-        \"HttpHeaders\": {
-                \"User-Agent\": \"Docker-Client/19.03.7 (linux)\"
-        },
         \"proxies\": {
                 \"default\": {
                         \"httpProxy\": \"http://${server}:911\",
