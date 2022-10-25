@@ -85,7 +85,8 @@ cmd='/usr/sbin/update-ca-certificates'
 downloadCerts(){
   if ! [ -x "$(command -v unzip)" ]; then
     echo 'Error: unzip is not installed.' >&2
-    exit 1
+    sudo apt install -y unzip
+    #exit 1
   fi
   http_proxy='' &&\
   sudo -E wget $certsUrl -O $certsFolder/$certsFile
