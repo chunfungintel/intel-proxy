@@ -42,7 +42,7 @@ sudo systemctl stop containerd.service
 
 sudo mkdir -p /etc/systemd/system/containerd.service.d
 
-cat <<EOF | sudo -E tee /etc/systemd/system/docker.service.d/http-proxy.conf
+cat <<EOF | sudo -E tee /etc/systemd/system/containerd.service.d/http-proxy.conf
 [Service]
 Environment="HTTP_PROXY=http://${server}:911/"
 Environment="HTTPS_PROXY=http://${server}:912/"
