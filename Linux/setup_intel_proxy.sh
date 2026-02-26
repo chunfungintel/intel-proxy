@@ -101,27 +101,27 @@ AddProxyLine "http_proxy=http://${server}:911" "http_proxy" "/etc/environment"
 AddProxyLine "https_proxy=http://${server}:912" "https_proxy" "/etc/environment"
 AddProxyLine "ftp_proxy=http://${server}:911" "ftp_proxy" "/etc/environment"
 AddProxyLine "socks_proxy=http://${server}:1080" "socks_proxy" "/etc/environment"
-AddProxyLine "no_proxy=10.0.0.0/8,192.168.0.0/16,localhost,.local,127.0.0.0/8,172.16.0.0/12,134.134.0.0/16,10.226.76.0/23" "no_proxy" "/etc/environment"
+AddProxyLine "no_proxy=10.0.0.0/8,192.168.0.0/16,localhost,.local,127.0.0.0/8,172.16.0.0/12,134.134.0.0/16,10.226.76.0/23,linux-ftp.intel.com" "no_proxy" "/etc/environment"
 #You have to duplicate upper-case and lower-case because some programs
 #only look for one or the other
 AddProxyLine "HTTP_PROXY=http://${server}:911" "HTTP_PROXY" "/etc/environment"
 AddProxyLine "HTTPS_PROXY=http://${server}:912" "HTTPS_PROXY" "/etc/environment"
 AddProxyLine "FTP_PROXY=http://${server}:911" "FTP_PROXY" "/etc/environment"
 AddProxyLine "SOCKS_PROXY=http://${server}:1080" "SOCKS_PROXY" "/etc/environment"
-AddProxyLine "NO_PROXY=10.0.0.0/8,192.168.0.0/16,localhost,.local,127.0.0.0/8,172.16.0.0/12,134.134.0.0/16,10.226.76.0/23" "NO_PROXY" "/etc/environment"
+AddProxyLine "NO_PROXY=10.0.0.0/8,192.168.0.0/16,localhost,.local,127.0.0.0/8,172.16.0.0/12,134.134.0.0/16,10.226.76.0/23,linux-ftp.intel.com" "NO_PROXY" "/etc/environment"
 
-AddProxyLine "export http_proxy=http://${server}:911" "export http_proxy" "~/.bashrc"
-AddProxyLine "export https_proxy=http://${server}:912" "export https_proxy" "~/.bashrc"
-AddProxyLine "export ftp_proxy=http://${server}:911" "export ftp_proxy" "~/.bashrc"
-AddProxyLine "export socks_proxy=http://${server}:1080" "export socks_proxy" "~/.bashrc"
-AddProxyLine "export no_proxy=10.0.0.0/8,192.168.0.0/16,localhost,.local,127.0.0.0/8,172.16.0.0/12,134.134.0.0/16,10.226.76.0/23" "export no_proxy" "~/.bashrc"
-#You have to duplicate upper-case and lower-case because some programs
-#only look for one or the other
-AddProxyLine "export HTTP_PROXY=http://${server}:911" "export HTTP_PROXY" "~/.bashrc"
-AddProxyLine "export HTTPS_PROXY=http://${server}:912" "export HTTPS_PROXY" "~/.bashrc"
-AddProxyLine "export FTP_PROXY=http://${server}:911" "export FTP_PROXY" "~/.bashrc"
-AddProxyLine "export SOCKS_PROXY=http://${server}:1080" "export SOCKS_PROXY" "~/.bashrc"
-AddProxyLine "export NO_PROXY=10.0.0.0/8,192.168.0.0/16,localhost,.local,127.0.0.0/8,172.16.0.0/12,134.134.0.0/16,10.226.76.0/23" "export NO_PROXY" "~/.bashrc"
+#AddProxyLine "export http_proxy=http://${server}:911" "export http_proxy" "~/.bashrc"
+#AddProxyLine "export https_proxy=http://${server}:912" "export https_proxy" "~/.bashrc"
+#AddProxyLine "export ftp_proxy=http://${server}:911" "export ftp_proxy" "~/.bashrc"
+#AddProxyLine "export socks_proxy=http://${server}:1080" "export socks_proxy" "~/.bashrc"
+#AddProxyLine "export no_proxy=10.0.0.0/8,192.168.0.0/16,localhost,.local,127.0.0.0/8,172.16.0.0/12,134.134.0.0/16,10.226.76.0/23" "export no_proxy" "~/.bashrc"
+##You have to duplicate upper-case and lower-case because some programs
+##only look for one or the other
+#AddProxyLine "export HTTP_PROXY=http://${server}:911" "export HTTP_PROXY" "~/.bashrc"
+#AddProxyLine "export HTTPS_PROXY=http://${server}:912" "export HTTPS_PROXY" "~/.bashrc"
+#AddProxyLine "export FTP_PROXY=http://${server}:911" "export FTP_PROXY" "~/.bashrc"
+#AddProxyLine "export SOCKS_PROXY=http://${server}:1080" "export SOCKS_PROXY" "~/.bashrc"
+#AddProxyLine "export NO_PROXY=10.0.0.0/8,192.168.0.0/16,localhost,.local,127.0.0.0/8,172.16.0.0/12,134.134.0.0/16,10.226.76.0/23" "export NO_PROXY" "~/.bashrc"
 
 AddAptLine "Acquire::http::Proxy \"http://${server}:911\";" "Acquire::http::Proxy"
 AddAptLine "Acquire::ftp::Proxy \"http://${server}:911\";" "Acquire::ftp::Proxy"
